@@ -31,29 +31,29 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this._FormDrag1 = new ns1.BunifuDragControl(this.components);
+            this.pbLogo = new System.Windows.Forms.PictureBox();
             this._FormElipse = new ns1.BunifuElipse(this.components);
             this.plSide = new System.Windows.Forms.Panel();
-            this.plHeader = new System.Windows.Forms.Panel();
-            this.lbDeviceName = new System.Windows.Forms.Label();
-            this.plLogo = new System.Windows.Forms.Panel();
-            this._FormDrag2 = new ns1.BunifuDragControl(this.components);
-            this.ltExit = new System.Windows.Forms.Label();
-            this.lbMinimize = new System.Windows.Forms.Label();
-            this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.btCP = new ns1.BunifuImageButton();
-            this.btRAM = new ns1.BunifuImageButton();
             this.btVC = new ns1.BunifuImageButton();
-            this.plFooter = new System.Windows.Forms.Panel();
+            this.btRAM = new ns1.BunifuImageButton();
+            this.btCP = new ns1.BunifuImageButton();
+            this.plLogo = new System.Windows.Forms.Panel();
+            this.plHeader = new System.Windows.Forms.Panel();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
+            this.lbMinimize = new System.Windows.Forms.Label();
+            this.ltExit = new System.Windows.Forms.Label();
+            this.lbDeviceName = new System.Windows.Forms.Label();
+            this._FormDrag2 = new ns1.BunifuDragControl(this.components);
+            this.plFooter = new System.Windows.Forms.Panel();
             this.btSave = new ns1.BunifuImageButton();
             this.plProc = new SysInfoChanger.Processor();
-            this.plSide.SuspendLayout();
-            this.plHeader.SuspendLayout();
-            this.plLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btCP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btRAM)).BeginInit();
+            this.plSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btVC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btRAM)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btCP)).BeginInit();
+            this.plLogo.SuspendLayout();
+            this.plHeader.SuspendLayout();
             this.plFooter.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btSave)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,16 @@
             this._FormDrag1.Horizontal = true;
             this._FormDrag1.TargetControl = this.pbLogo;
             this._FormDrag1.Vertical = true;
+            // 
+            // pbLogo
+            // 
+            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
+            this.pbLogo.Location = new System.Drawing.Point(0, 0);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(70, 50);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 0;
+            this.pbLogo.TabStop = false;
             // 
             // _FormElipse
             // 
@@ -83,75 +93,31 @@
             this.plSide.Size = new System.Drawing.Size(70, 256);
             this.plSide.TabIndex = 0;
             // 
-            // plHeader
+            // btVC
             // 
-            this.plHeader.BackColor = System.Drawing.Color.White;
-            this.plHeader.Controls.Add(this.bunifuSeparator1);
-            this.plHeader.Controls.Add(this.lbMinimize);
-            this.plHeader.Controls.Add(this.ltExit);
-            this.plHeader.Controls.Add(this.lbDeviceName);
-            this.plHeader.Dock = System.Windows.Forms.DockStyle.Top;
-            this.plHeader.Location = new System.Drawing.Point(70, 0);
-            this.plHeader.Name = "plHeader";
-            this.plHeader.Size = new System.Drawing.Size(442, 50);
-            this.plHeader.TabIndex = 0;
+            this.btVC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btVC.Image = ((System.Drawing.Image)(resources.GetObject("btVC.Image")));
+            this.btVC.ImageActive = null;
+            this.btVC.Location = new System.Drawing.Point(10, 190);
+            this.btVC.Name = "btVC";
+            this.btVC.Size = new System.Drawing.Size(50, 50);
+            this.btVC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btVC.TabIndex = 1;
+            this.btVC.TabStop = false;
+            this.btVC.Zoom = 10;
             // 
-            // lbDeviceName
+            // btRAM
             // 
-            this.lbDeviceName.AutoSize = true;
-            this.lbDeviceName.Location = new System.Drawing.Point(15, 15);
-            this.lbDeviceName.Name = "lbDeviceName";
-            this.lbDeviceName.Size = new System.Drawing.Size(76, 22);
-            this.lbDeviceName.TabIndex = 0;
-            this.lbDeviceName.Text = "Device";
-            // 
-            // plLogo
-            // 
-            this.plLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
-            this.plLogo.Controls.Add(this.pbLogo);
-            this.plLogo.Location = new System.Drawing.Point(0, 0);
-            this.plLogo.Name = "plLogo";
-            this.plLogo.Size = new System.Drawing.Size(70, 50);
-            this.plLogo.TabIndex = 0;
-            // 
-            // _FormDrag2
-            // 
-            this._FormDrag2.Fixed = true;
-            this._FormDrag2.Horizontal = true;
-            this._FormDrag2.TargetControl = this.plHeader;
-            this._FormDrag2.Vertical = true;
-            // 
-            // ltExit
-            // 
-            this.ltExit.AutoSize = true;
-            this.ltExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ltExit.Location = new System.Drawing.Point(408, 15);
-            this.ltExit.Name = "ltExit";
-            this.ltExit.Size = new System.Drawing.Size(22, 22);
-            this.ltExit.TabIndex = 0;
-            this.ltExit.Text = "X";
-            this.ltExit.Click += new System.EventHandler(this.ltExit_Click);
-            // 
-            // lbMinimize
-            // 
-            this.lbMinimize.AutoSize = true;
-            this.lbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbMinimize.Location = new System.Drawing.Point(386, 15);
-            this.lbMinimize.Name = "lbMinimize";
-            this.lbMinimize.Size = new System.Drawing.Size(16, 22);
-            this.lbMinimize.TabIndex = 0;
-            this.lbMinimize.Text = "-";
-            this.lbMinimize.Click += new System.EventHandler(this.lbMinimize_Click);
-            // 
-            // pbLogo
-            // 
-            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
-            this.pbLogo.Location = new System.Drawing.Point(0, 0);
-            this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(70, 50);
-            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbLogo.TabIndex = 0;
-            this.pbLogo.TabStop = false;
+            this.btRAM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btRAM.Image = ((System.Drawing.Image)(resources.GetObject("btRAM.Image")));
+            this.btRAM.ImageActive = null;
+            this.btRAM.Location = new System.Drawing.Point(10, 130);
+            this.btRAM.Name = "btRAM";
+            this.btRAM.Size = new System.Drawing.Size(50, 50);
+            this.btRAM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btRAM.TabIndex = 1;
+            this.btRAM.TabStop = false;
+            this.btRAM.Zoom = 10;
             // 
             // btCP
             // 
@@ -167,31 +133,79 @@
             this.btCP.Zoom = 10;
             this.btCP.Click += new System.EventHandler(this.btCP_Click);
             // 
-            // btRAM
+            // plLogo
             // 
-            this.btRAM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.btRAM.Image = ((System.Drawing.Image)(resources.GetObject("btRAM.Image")));
-            this.btRAM.ImageActive = null;
-            this.btRAM.Location = new System.Drawing.Point(10, 130);
-            this.btRAM.Name = "btRAM";
-            this.btRAM.Size = new System.Drawing.Size(50, 50);
-            this.btRAM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btRAM.TabIndex = 1;
-            this.btRAM.TabStop = false;
-            this.btRAM.Zoom = 10;
+            this.plLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(126)))), ((int)(((byte)(34)))));
+            this.plLogo.Controls.Add(this.pbLogo);
+            this.plLogo.Location = new System.Drawing.Point(0, 0);
+            this.plLogo.Name = "plLogo";
+            this.plLogo.Size = new System.Drawing.Size(70, 50);
+            this.plLogo.TabIndex = 0;
             // 
-            // btVC
+            // plHeader
             // 
-            this.btVC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.btVC.Image = ((System.Drawing.Image)(resources.GetObject("btVC.Image")));
-            this.btVC.ImageActive = null;
-            this.btVC.Location = new System.Drawing.Point(10, 190);
-            this.btVC.Name = "btVC";
-            this.btVC.Size = new System.Drawing.Size(50, 50);
-            this.btVC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btVC.TabIndex = 1;
-            this.btVC.TabStop = false;
-            this.btVC.Zoom = 10;
+            this.plHeader.BackColor = System.Drawing.Color.White;
+            this.plHeader.Controls.Add(this.bunifuSeparator1);
+            this.plHeader.Controls.Add(this.lbMinimize);
+            this.plHeader.Controls.Add(this.ltExit);
+            this.plHeader.Controls.Add(this.lbDeviceName);
+            this.plHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.plHeader.Location = new System.Drawing.Point(70, 0);
+            this.plHeader.Name = "plHeader";
+            this.plHeader.Size = new System.Drawing.Size(442, 50);
+            this.plHeader.TabIndex = 0;
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.bunifuSeparator1.LineThickness = 2;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 49);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(444, 1);
+            this.bunifuSeparator1.TabIndex = 0;
+            this.bunifuSeparator1.TabStop = false;
+            this.bunifuSeparator1.Transparency = 100;
+            this.bunifuSeparator1.Vertical = false;
+            // 
+            // lbMinimize
+            // 
+            this.lbMinimize.AutoSize = true;
+            this.lbMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbMinimize.Location = new System.Drawing.Point(386, 15);
+            this.lbMinimize.Name = "lbMinimize";
+            this.lbMinimize.Size = new System.Drawing.Size(16, 22);
+            this.lbMinimize.TabIndex = 0;
+            this.lbMinimize.Text = "-";
+            this.lbMinimize.Click += new System.EventHandler(this.lbMinimize_Click);
+            // 
+            // ltExit
+            // 
+            this.ltExit.AutoSize = true;
+            this.ltExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ltExit.Location = new System.Drawing.Point(408, 15);
+            this.ltExit.Name = "ltExit";
+            this.ltExit.Size = new System.Drawing.Size(22, 22);
+            this.ltExit.TabIndex = 0;
+            this.ltExit.Text = "X";
+            this.ltExit.Click += new System.EventHandler(this.ltExit_Click);
+            // 
+            // lbDeviceName
+            // 
+            this.lbDeviceName.AutoSize = true;
+            this.lbDeviceName.Location = new System.Drawing.Point(15, 15);
+            this.lbDeviceName.Name = "lbDeviceName";
+            this.lbDeviceName.Size = new System.Drawing.Size(76, 22);
+            this.lbDeviceName.TabIndex = 0;
+            this.lbDeviceName.Text = "Device";
+            // 
+            // _FormDrag2
+            // 
+            this._FormDrag2.Fixed = true;
+            this._FormDrag2.Horizontal = true;
+            this._FormDrag2.TargetControl = this.plHeader;
+            this._FormDrag2.Vertical = true;
             // 
             // plFooter
             // 
@@ -202,20 +216,6 @@
             this.plFooter.Name = "plFooter";
             this.plFooter.Size = new System.Drawing.Size(442, 50);
             this.plFooter.TabIndex = 0;
-            // 
-            // bunifuSeparator1
-            // 
-            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bunifuSeparator1.LineThickness = 1;
-            this.bunifuSeparator1.Location = new System.Drawing.Point(0, 49);
-            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(444, 1);
-            this.bunifuSeparator1.TabIndex = 0;
-            this.bunifuSeparator1.TabStop = false;
-            this.bunifuSeparator1.Transparency = 100;
-            this.bunifuSeparator1.Vertical = false;
             // 
             // btSave
             // 
@@ -260,14 +260,14 @@
             this.Name = "MainForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "System Info Changer";
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.plSide.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btVC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btRAM)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btCP)).EndInit();
+            this.plLogo.ResumeLayout(false);
             this.plHeader.ResumeLayout(false);
             this.plHeader.PerformLayout();
-            this.plLogo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btCP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btRAM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btVC)).EndInit();
             this.plFooter.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btSave)).EndInit();
             this.ResumeLayout(false);

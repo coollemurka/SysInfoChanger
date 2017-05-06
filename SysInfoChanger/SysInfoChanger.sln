@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SysInfoChanger", "SysInfoChanger\SysInfoChanger.csproj", "{791E8E7E-355D-4314-AC16-B42EE6A8544C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{12EFA62D-10AE-46D0-8635-5081E459E70A} = {12EFA62D-10AE-46D0-8635-5081E459E70A}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIC", "SIC\SIC.csproj", "{12EFA62D-10AE-46D0-8635-5081E459E70A}"
 EndProject
