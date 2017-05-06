@@ -104,7 +104,9 @@
             this.btVC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btVC.TabIndex = 1;
             this.btVC.TabStop = false;
+            this.btVC.Tag = "vc";
             this.btVC.Zoom = 10;
+            this.btVC.Click += new System.EventHandler(this.btpl_Click);
             // 
             // btRAM
             // 
@@ -117,7 +119,9 @@
             this.btRAM.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btRAM.TabIndex = 1;
             this.btRAM.TabStop = false;
+            this.btRAM.Tag = "ram";
             this.btRAM.Zoom = 10;
+            this.btRAM.Click += new System.EventHandler(this.btpl_Click);
             // 
             // btCP
             // 
@@ -130,8 +134,9 @@
             this.btCP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btCP.TabIndex = 1;
             this.btCP.TabStop = false;
+            this.btCP.Tag = "proc";
             this.btCP.Zoom = 10;
-            this.btCP.Click += new System.EventHandler(this.btCP_Click);
+            this.btCP.Click += new System.EventHandler(this.btpl_Click);
             // 
             // plLogo
             // 
@@ -159,7 +164,7 @@
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bunifuSeparator1.LineThickness = 2;
+            this.bunifuSeparator1.LineThickness = 3;
             this.bunifuSeparator1.Location = new System.Drawing.Point(0, 49);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";

@@ -33,16 +33,17 @@ namespace SysInfoChanger
             WindowState = FormWindowState.Minimized;
         }
 
-        private void btCP_Click(object sender, EventArgs e)
+        private void btpl_Click(object sender, EventArgs e)
         {
-            _changePanel("proc");
+            _changePanel((sender as Control).Tag as string);
         }
 
         private void _changePanel(string plChnageName)
         {
-            switch(plChnageName)
+            switch (plChnageName)
             {
                 case "proc":
+                    lbDeviceName.Text = "Processor(CP)";
                     plOpenedName = plChnageName;
                     if (plProc.Visible)
                     {
@@ -54,6 +55,15 @@ namespace SysInfoChanger
                         plProc.Show();
                         btSave.Show();
                     }
+                    break;
+                case "ram":
+                case "vc":
+                default:
+                    lbDeviceName.Text = "Device";
+                    //plRAM.Hide();
+                    //plVC.Hide();
+                    plProc.Hide();
+                    btSave.Hide();
                     break;
             }
         }
@@ -67,5 +77,6 @@ namespace SysInfoChanger
                     break;
             }
         }
+
     }
 }
