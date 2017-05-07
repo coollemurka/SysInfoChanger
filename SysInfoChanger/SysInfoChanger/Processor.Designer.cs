@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tbName = new ns1.BunifuMaterialTextbox();
+            this.tbName = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lbCores = new System.Windows.Forms.Label();
             this.lbMHz = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -79,6 +79,7 @@
             this.Controls.Add(this.lbMHz);
             this.Controls.Add(this.lbCores);
             this.Controls.Add(this.tbName);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Processor";
             this.Size = new System.Drawing.Size(442, 156);
             this.ResumeLayout(false);
@@ -87,7 +88,7 @@
 
         #endregion
 
-        public ns1.BunifuMaterialTextbox tbName;
+        public Bunifu.Framework.UI.BunifuMaterialTextbox tbName;
         public System.Windows.Forms.Label lbCores;
         public System.Windows.Forms.Label lbMHz;
     }

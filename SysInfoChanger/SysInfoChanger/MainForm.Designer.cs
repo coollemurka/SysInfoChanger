@@ -30,26 +30,27 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this._FormDrag1 = new ns1.BunifuDragControl(this.components);
+            this._FormDrag1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this._FormElipse = new ns1.BunifuElipse(this.components);
+            this._FormElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.plSide = new System.Windows.Forms.Panel();
-            this.btVC = new ns1.BunifuImageButton();
-            this.btRAM = new ns1.BunifuImageButton();
-            this.btCP = new ns1.BunifuImageButton();
+            this.btSSD = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btRAM = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btCP = new Bunifu.Framework.UI.BunifuImageButton();
             this.plLogo = new System.Windows.Forms.Panel();
             this.plHeader = new System.Windows.Forms.Panel();
-            this.bunifuSeparator1 = new ns1.BunifuSeparator();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.lbMinimize = new System.Windows.Forms.Label();
             this.ltExit = new System.Windows.Forms.Label();
             this.lbDeviceName = new System.Windows.Forms.Label();
-            this._FormDrag2 = new ns1.BunifuDragControl(this.components);
+            this._FormDrag2 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.plFooter = new System.Windows.Forms.Panel();
-            this.btSave = new ns1.BunifuImageButton();
+            this.btSave = new Bunifu.Framework.UI.BunifuImageButton();
             this.plProc = new SysInfoChanger.Processor();
+            this.plSSD = new SysInfoChanger.SSD();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.plSide.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btVC)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btSSD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btRAM)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btCP)).BeginInit();
             this.plLogo.SuspendLayout();
@@ -83,7 +84,7 @@
             // plSide
             // 
             this.plSide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.plSide.Controls.Add(this.btVC);
+            this.plSide.Controls.Add(this.btSSD);
             this.plSide.Controls.Add(this.btRAM);
             this.plSide.Controls.Add(this.btCP);
             this.plSide.Controls.Add(this.plLogo);
@@ -93,20 +94,20 @@
             this.plSide.Size = new System.Drawing.Size(70, 256);
             this.plSide.TabIndex = 0;
             // 
-            // btVC
+            // btSSD
             // 
-            this.btVC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.btVC.Image = ((System.Drawing.Image)(resources.GetObject("btVC.Image")));
-            this.btVC.ImageActive = null;
-            this.btVC.Location = new System.Drawing.Point(10, 190);
-            this.btVC.Name = "btVC";
-            this.btVC.Size = new System.Drawing.Size(50, 50);
-            this.btVC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btVC.TabIndex = 1;
-            this.btVC.TabStop = false;
-            this.btVC.Tag = "vc";
-            this.btVC.Zoom = 10;
-            this.btVC.Click += new System.EventHandler(this.btpl_Click);
+            this.btSSD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.btSSD.Image = ((System.Drawing.Image)(resources.GetObject("btSSD.Image")));
+            this.btSSD.ImageActive = null;
+            this.btSSD.Location = new System.Drawing.Point(10, 190);
+            this.btSSD.Name = "btSSD";
+            this.btSSD.Size = new System.Drawing.Size(50, 50);
+            this.btSSD.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btSSD.TabIndex = 1;
+            this.btSSD.TabStop = false;
+            this.btSSD.Tag = "ssd";
+            this.btSSD.Zoom = 10;
+            this.btSSD.Click += new System.EventHandler(this.btpl_Click);
             // 
             // btRAM
             // 
@@ -164,7 +165,7 @@
             // 
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bunifuSeparator1.LineThickness = 3;
+            this.bunifuSeparator1.LineThickness = 14;
             this.bunifuSeparator1.Location = new System.Drawing.Point(0, 49);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
@@ -240,6 +241,7 @@
             // plProc
             // 
             this.plProc.BackColor = System.Drawing.Color.LightGray;
+            this.plProc.ForeColor = System.Drawing.Color.Black;
             this.plProc.Location = new System.Drawing.Point(70, 49);
             this.plProc.Name = "plProc";
             this.plProc.Size = new System.Drawing.Size(442, 156);
@@ -247,17 +249,31 @@
             this.plProc.TabStop = false;
             this.plProc.Visible = false;
             // 
+            // plSSD
+            // 
+            this.plSSD.BackColor = System.Drawing.Color.LightGray;
+            this.plSSD.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.plSSD.ForeColor = System.Drawing.Color.Black;
+            this.plSSD.Location = new System.Drawing.Point(70, 49);
+            this.plSSD.Name = "plSSD";
+            this.plSSD.Size = new System.Drawing.Size(442, 156);
+            this.plSSD.TabIndex = 0;
+            this.plSSD.TabStop = false;
+            this.plSSD.Visible = false;
+            // 
             // MainForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(512, 256);
             this.ControlBox = false;
+            this.Controls.Add(this.plSSD);
             this.Controls.Add(this.plFooter);
             this.Controls.Add(this.plHeader);
             this.Controls.Add(this.plSide);
             this.Controls.Add(this.plProc);
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -267,7 +283,7 @@
             this.Text = "System Info Changer";
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.plSide.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btVC)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btSSD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btRAM)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btCP)).EndInit();
             this.plLogo.ResumeLayout(false);
@@ -281,22 +297,23 @@
 
         #endregion
 
-        private ns1.BunifuDragControl _FormDrag1;
-        private ns1.BunifuElipse _FormElipse;
+        private Bunifu.Framework.UI.BunifuDragControl _FormDrag1;
+        private Bunifu.Framework.UI.BunifuElipse _FormElipse;
         private System.Windows.Forms.Panel plHeader;
         private System.Windows.Forms.Label lbDeviceName;
         private System.Windows.Forms.Panel plSide;
         private System.Windows.Forms.Panel plLogo;
-        private ns1.BunifuDragControl _FormDrag2;
+        private Bunifu.Framework.UI.BunifuDragControl _FormDrag2;
         private System.Windows.Forms.Label ltExit;
         private System.Windows.Forms.Label lbMinimize;
         private System.Windows.Forms.PictureBox pbLogo;
-        private ns1.BunifuImageButton btCP;
-        private ns1.BunifuImageButton btRAM;
-        private ns1.BunifuImageButton btVC;
+        private Bunifu.Framework.UI.BunifuImageButton btCP;
+        private Bunifu.Framework.UI.BunifuImageButton btRAM;
+        private Bunifu.Framework.UI.BunifuImageButton btSSD;
         private System.Windows.Forms.Panel plFooter;
-        private ns1.BunifuSeparator bunifuSeparator1;
-        private ns1.BunifuImageButton btSave;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
+        private Bunifu.Framework.UI.BunifuImageButton btSave;
         private Processor plProc;
+        private SSD plSSD;
     }
 }

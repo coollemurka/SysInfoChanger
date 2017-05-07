@@ -38,9 +38,9 @@
     <ApplicationIcon>icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>libs\Bunifu_UI_v1.52.dll</HintPath>
+      <HintPath>libs\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -69,8 +69,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SSD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SSD.Designer.cs">
+      <DependentUpon>SSD.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Processor.resx">
       <DependentUpon>Processor.cs</DependentUpon>
@@ -84,6 +91,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SSD.resx">
+      <DependentUpon>SSD.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -107,11 +117,14 @@
   <ItemGroup>
     <Content Include="icon.ico" />
     <Content Include="icons\chip.png" />
+    <Content Include="icons\folder.png" />
     <Content Include="icons\logo.ico" />
     <Content Include="icons\logo.png" />
     <Content Include="icons\ram-memory.png" />
     <Content Include="icons\save.png" />
+    <Content Include="icons\ssd1.png" />
     <Content Include="icons\video-card.png" />
+    <Content Include="libs\Bunifu_UI_v1.5.3.dll" />
     <Content Include="libs\Bunifu_UI_v1.52.dll" />
   </ItemGroup>
   <ItemGroup />

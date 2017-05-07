@@ -1,4 +1,7 @@
 ﻿using System;
+using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 using System.Windows.Forms;
 
 namespace SysInfoChanger
@@ -13,6 +16,7 @@ namespace SysInfoChanger
         }
 
         private SIC.Processor proc;
+        private SIC.HardDisk ssd;
         private string plOpenedName = "";
 
         private void _initProc()
@@ -38,32 +42,41 @@ namespace SysInfoChanger
             _changePanel((sender as Control).Tag as string);
         }
 
-        private void _changePanel(string plChnageName)
+        private void _changePanel(string plChangeName)
         {
-            switch (plChnageName)
+            switch (plChangeName)
             {
                 case "proc":
                     lbDeviceName.Text = "Processor(CP)";
-                    plOpenedName = plChnageName;
+                    plOpenedName = plChangeName;
                     if (plProc.Visible)
                     {
-                        plProc.Hide();
-                        btSave.Hide();
+                        btSave.Visible = plProc.Visible = plSSD.Visible = false;
                     }
                     else
                     {
-                        plProc.Show();
-                        btSave.Show();
+                        plSSD.Visible = false;
+                        btSave.Visible = plProc.Visible = true;
                     }
                     break;
-                case "ram":
-                case "vc":
+                case "ssd":
+                    lbDeviceName.Text = "SSD";
+                    plOpenedName = plChangeName;
+                    if (plSSD.Visible)
+                    {
+                        btSave.Visible = plProc.Visible = plSSD.Visible = false;
+                    }
+                    else
+                    {
+                        plProc.Visible = false;
+                        btSave.Visible = plSSD.Visible = true;
+                    }
+                    break;
+                //case "ram":
                 default:
                     lbDeviceName.Text = "Device";
                     //plRAM.Hide();
-                    //plVC.Hide();
-                    plProc.Hide();
-                    btSave.Hide();
+                    btSave.Visible = plProc.Visible = plSSD.Visible = false;
                     break;
             }
         }
@@ -74,6 +87,10 @@ namespace SysInfoChanger
             {
                 case "proc":
                     proc.Name = plProc.tbName.Text;
+                    break;
+                case "ssd":
+                    ssd = new SIC.HardDisk(plSSD.Path, plSSD.Quota);
+                    if (ssd.Mount(string.Empty, plSSD.Letter)) MessageBox.Show("Done"); else MessageBox.Show("Already Mounted");
                     break;
             }
         }
